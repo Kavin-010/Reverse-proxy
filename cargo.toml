@@ -1,0 +1,20 @@
+[package]
+name    = "reverse-proxy"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "reverse-proxy"
+path = "src/main.rs"
+
+[dependencies]
+hyper              = { version = "0.14", features = ["full"] }
+tokio              = { version = "1",    features = ["full"] }
+tokio-rustls       = "0.24"
+rustls             = { version = "0.21", features = ["dangerous_configuration"] }
+rustls-pemfile     = "1"
+rcgen              = "0.11"
+tracing            = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "json"] }
+tracing-appender   = "0.2"
+chrono             = "0.4"
